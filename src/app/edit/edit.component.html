@@ -1,0 +1,39 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main">
+    <mat-card fxFlex="40">
+        <mat-toolbar color="primary">Edit Data</mat-toolbar>
+        <form fxLayoutAlign="strech" fxLayout="column" class="f1" >
+        <mat-form-field>
+            <input matInput name="name"  placeholder="Name" [(ngModel)]="myName">
+          </mat-form-field>
+          <p>{{myName}}</p>
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" (dateChange)="dateChange($event)">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker">
+            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+          
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <label id="education">Select your highest qualification</label>
+          <mat-radio-group class="wor" [value]="edu" aria-label="education" (change)="optChange($event)">
+            <mat-radio-button class="b" value="High School" [checked]="edu==1">High School</mat-radio-button>
+            <mat-radio-button class="b" value="Graduate" [checked]="edu==2">Graduate</mat-radio-button>
+            <mat-radio-button class="b" value="Post Graduate" [checked]="edu==3">Post Graduate</mat-radio-button>
+          </mat-radio-group>
+
+          <label id="work">Select your work Experience</label>
+          <mat-radio-group class="wor" aria-label="work experience" (change)="expChange($event)">
+            <mat-radio-button class="b" value="Fresher">Fresher</mat-radio-button>
+            <mat-radio-button class="b" value="1-2 years">1-2 years</mat-radio-button>
+            <mat-radio-button class="b" value="3-4 years">3-4 years</mat-radio-button>
+            <mat-radio-button class="b" value="More than 4 years">More than 4 years</mat-radio-button>
+          </mat-radio-group>
+         <div class="btn">
+          <button mat-raised-button color="accent" (click)="updateValue()">Update</button>
+          <button mat-raised-button color="primary" (click)="goProfile()">Visit Profile</button>
+        </div>
+        </form>
+    </mat-card>
+</div>

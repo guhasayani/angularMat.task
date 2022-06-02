@@ -1,0 +1,26 @@
+<div fxLayoutAlign="center center" fxFlexFill >
+    <mat-card fxFlex="30" class="main">
+        <mat-toolbar color="primary">Welcome to your profile</mat-toolbar>
+        <div class="head2">
+            <img src="./assets/myphoto.jpeg" height="70px" width="70px">
+            <p>{{myName}}</p>
+        </div>
+        <div class="body1">
+            <label>Date of Birth</label>
+            <p>{{dob | date}}</p><br>
+            <label>Education</label>
+            <p>{{edu}}</p><br>
+            <label>work</label>
+            <p>{{exp}}</p>
+            <div class="btn">
+                <button mat-raised-button color="primary" (click)="goEdit()">Edit Profile</button>
+                <button mat-raised-button color="warn" (click)="goHome()">Log Out</button>
+            </div>
+        </div>
+        <div class="footer" #footer>
+            <a href="https://www.facebook.com/help/753701661398957/?helpref=uf_share"><img src="./assets/facebook.png" height="40px" width="40px"></a>
+            <a href="https://about.instagram.com/"><img src="./assets/instagram.png" height="40px" width="40px"></a>
+            <a href="https://www.linkedin.com/help/linkedin/answer/a523215/linkedin-homepage-overview?lang=en"><img src="./assets/linkedin.jpg" height="40px" width="40px"></a>
+        </div>
+    </mat-card>
+</div>

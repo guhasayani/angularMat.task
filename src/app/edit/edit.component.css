@@ -1,0 +1,23 @@
+.f1 input{
+    margin-top: 10px;
+    
+}
+.f1{
+    margin-top: 20px;
+}
+.btn button{
+    margin-left: 25%;
+    margin-top: 20px;
+}
+#education{
+    margin-top: 20px;
+}
+#work{
+    margin-top: 20px;
+}
+.edu mat-radio-button{
+    padding:20px;
+}
+.wor mat-radio-button{
+    padding:20px;
+}
